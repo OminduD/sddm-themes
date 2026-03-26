@@ -4,7 +4,7 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import Qt5Compat.GraphicalEffects
+import QtGraphicalEffects 1.0
 import SddmComponents 2.0 as SDDM
 
 Item {
