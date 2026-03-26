@@ -6,8 +6,8 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
-import Qt5Compat.GraphicalEffects
-import QtMultimedia
+import QtGraphicalEffects 1.0
+import QtMultimedia 5.15
 import SddmComponents 2.0 as SDDM
 import "Components"
 
