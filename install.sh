@@ -78,12 +78,12 @@ title() {
     clear
     if command -v gum &>/dev/null; then
         gum style \
-            --foreground 213 --border-foreground 140 \
-            --border double --align center --width 60 \
+            --foreground 212 --border-foreground 99 \
+            --border rounded --align center --width 65 \
             --margin "1 1" --padding "1 2" \
-            "💎 HYPRLANDS SDDM THEMES 💎" "" "Install ultra-premium video wallpapers" "with immersive cinematic ambiance."
+            "✨ 💎 HYPRLANDS SDDM THEMES 💎 ✨" "" "Ultra-Premium Video Wallpapers" "with immersive cinematic ambiance" "" "Designed for perfection."
     else
-        echo -e "\n\e[1;38;5;213m💎 HYPRLANDS SDDM THEMES 💎\e[0m\n"
+        echo -e "\n\e[1;38;5;213m✨ 💎 HYPRLANDS SDDM THEMES 💎 ✨\e[0m\n"
     fi
 }
 
@@ -312,6 +312,59 @@ preview_theme() {
 }
 
 # ──────────────────────────────────────────────────────────────
+# Step 7.5 — Preview ANY theme without changing active install permanently
+# ──────────────────────────────────────────────────────────────
+preview_any_theme() {
+    if ! command -v sddm-greeter-qt6 &>/dev/null; then
+        error "sddm-greeter-qt6 not found. Install SDDM with Qt6 first."
+        return 1
+    fi
+    [[ ! -d "$THEME_DST" ]] && { error "Install theme files first (Option 4)."; return 1; }
+
+    info "Which theme would you like to preview?"
+    local i=0
+    declare -a pretty_names=()
+    for name in "${THEME_NAMES[@]}"; do
+        pretty_names+=("$name")
+    done
+
+    local chosen; chosen=$(choose "${pretty_names[@]}")
+    local variant=""
+
+    for i in "${!THEME_NAMES[@]}"; do
+        if [[ "${THEME_NAMES[$i]}" == "$chosen" ]]; then
+            variant="${THEME_VARIANTS[$i]}"
+            break
+        fi
+    done
+
+    [[ -z "$variant" ]] && { warn "Preview canceled."; return 1; }
+
+    info "Launching preview engine for: $variant"
+    
+    local original_variant
+    original_variant=$(sed -n 's|^ConfigFile=Themes/\(.*\)\.conf|\1|p' "$METADATA" 2>/dev/null || echo "")
+
+    sudo sed -i "s|^ConfigFile=.*|ConfigFile=Themes/${variant}.conf|" "$METADATA"
+
+    sddm-greeter-qt6 --test-mode --theme "$THEME_DST/" >"$LOG" 2>&1 &
+    local pid=$!
+    for _ in {1..15}; do kill -0 "$pid" 2>/dev/null || break; sleep 1; done
+    kill -0 "$pid" 2>/dev/null && kill "$pid"
+    
+    if [[ -n "$original_variant" && "$original_variant" != "$variant" ]]; then
+        echo
+        info "Preview finished. Did you like that theme?"
+        if confirm "Keep $variant as the active theme permanently?"; then
+            success "Awesome! Active variant is now $variant."
+        else
+            sudo sed -i "s|^ConfigFile=.*|ConfigFile=Themes/${original_variant}.conf|" "$METADATA"
+            info "Reverted to previous active theme: $original_variant"
+        fi
+    fi
+}
+
+# ──────────────────────────────────────────────────────────────
 # Step 8 — Enable SDDM service
 # ──────────────────────────────────────────────────────────────
 enable_sddm() {
@@ -342,6 +395,11 @@ complete_install() {
     else
         echo -e "\n\e[1;38;5;118m🎉 INSTALLATION COMPLETE! Reboot to enjoy your new login screen. 🎉\e[0m\n"
     fi
+
+    echo
+    if confirm "Would you like to preview your new premium login screen right now?"; then
+        preview_theme
+    fi
 }
 
 # ──────────────────────────────────────────────────────────────
@@ -356,28 +414,34 @@ main() {
         title
 
         local choice; choice=$(choose \
+            "─────────── QUICK ACTIONS ───────────" \
             "🚀  Complete Installation (1-Click Magic)" \
+            "──────────── THEME SETUP ────────────" \
+            "🎨  Select Theme Variant" \
+            "👁️   Preview Any Theme" \
+            "✨  Preview Selected Theme" \
+            "🖼️   Setup User Avatar (info)" \
+            "────────── ADVANCED TOOLS ───────────" \
             "📦  Install Dependencies" \
             "🔤  Install Fonts" \
-            "📂  Copy Theme to SDDM" \
-            "⚙️   Configure SDDM" \
-            "🎨  Select Theme Variant" \
-            "🖼️   Setup User Avatar (info)" \
-            "✨  Preview Selected Theme" \
-            "🔧  Enable SDDM Service" \
-            "❌  Exit")
+            "📂  Copy Theme Files to SDDM" \
+            "⚙️   Apply SDDM Configuration" \
+            "🔧  Enable SDDM System Service" \
+            "─────────────────────────────────────" \
+            "❌  Exit Installer")
 
         case "$choice" in
             "🚀  Complete Installation (1-Click Magic)") complete_install; exit 0 ;;
+            "🎨  Select Theme Variant")  select_variant ;;
+            "👁️   Preview Any Theme")    preview_any_theme ;;
+            "✨  Preview Selected Theme") preview_theme ;;
+            "🖼️   Setup User Avatar (info)") setup_avatar ;;
             "📦  Install Dependencies")  install_deps ;;
             "🔤  Install Fonts")         install_fonts ;;
-            "📂  Copy Theme to SDDM")   copy_theme ;;
-            "⚙️   Configure SDDM")       configure_sddm ;;
-            "🎨  Select Theme Variant")  select_variant ;;
-            "🖼️   Setup User Avatar (info)") setup_avatar ;;
-            "✨  Preview Selected Theme") preview_theme ;;
-            "🔧  Enable SDDM Service")   enable_sddm ;;
-            "❌  Exit") 
+            "📂  Copy Theme Files to SDDM")   copy_theme ;;
+            "⚙️   Apply SDDM Configuration")       configure_sddm ;;
+            "🔧  Enable SDDM System Service")   enable_sddm ;;
+            "❌  Exit Installer") 
                 if command -v gum &>/dev/null; then
                     gum style --foreground 212 --margin "1 2" "🌸 さようなら (Sayōnara) ! 🌸"
                 else
@@ -385,6 +449,7 @@ main() {
                 fi
                 exit 0 
                 ;;
+            *) continue ;;
         esac
 
         echo
