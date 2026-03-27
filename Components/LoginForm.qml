@@ -28,20 +28,13 @@ ColumnLayout {
     // ── Clock ──────────────────────────────────────────────────────
     Clock {
         id: clock
-        Layout.alignment:       formContainer.contentAlignment
+        Layout.alignment:       Qt.AlignHCenter
         Layout.preferredHeight: root.height / 3.2
-        Layout.leftMargin: p != 0 ? (a == "left" ? -p : a == "right" ? p : 0) : 0
+        Layout.fillWidth:       true
+        Layout.leftMargin:      0
     }
 
-    // ── User Avatar ────────────────────────────────────────────────
-    UserAvatar {
-        id: avatar
-        Layout.alignment:    formContainer.contentAlignH
-        Layout.topMargin:    root.font.pointSize * 1.5
-        Layout.bottomMargin: root.font.pointSize * 0.5
-        avatarSize:          root.height / 7
-        Layout.leftMargin:   p != 0 ? (a == "left" ? -p : a == "right" ? p : 0) : 0
-    }
+
 
     // ── Login fields ───────────────────────────────────────────────
     Input {
@@ -55,10 +48,10 @@ ColumnLayout {
     // ── Power / System buttons ─────────────────────────────────────
     SystemButtons {
         id: systemButtons
-        Layout.alignment:      formContainer.contentAlignH | Qt.AlignBottom
-        Layout.preferredHeight: root.height / 5
-        Layout.maximumHeight:   root.height / 5
-        Layout.leftMargin: p != 0 ? (a == "left" ? -p : a == "right" ? p : 0) : 0
+        Layout.alignment:       Qt.AlignHCenter | Qt.AlignBottom
+        Layout.preferredHeight: root.height / 7
+        Layout.maximumHeight:   root.height / 7
+        Layout.leftMargin: 0
 
         exposedSession: input.exposeSession
     }
@@ -66,18 +59,18 @@ ColumnLayout {
     // ── WM / Session selector ──────────────────────────────────────
     SessionButton {
         id: sessionSelect
-        Layout.alignment:      formContainer.contentAlignH | Qt.AlignBottom
-        Layout.preferredHeight: root.height / 54
-        Layout.maximumHeight:   root.height / 54
-        Layout.leftMargin: p != 0 ? (a == "left" ? -p : a == "right" ? p : 0) : 0
+        Layout.alignment:       Qt.AlignHCenter | Qt.AlignBottom
+        Layout.preferredHeight: root.height / 30
+        Layout.maximumHeight:   root.height / 30
+        Layout.leftMargin: 0
     }
 
     // ── Virtual Keyboard toggle ────────────────────────────────────
     VirtualKeyboardButton {
         id: virtualKeyboardButton
-        Layout.alignment:      formContainer.contentAlignH | Qt.AlignTop
+        Layout.alignment:       Qt.AlignHCenter | Qt.AlignTop
         Layout.preferredHeight: root.height / 27
         Layout.maximumHeight:   root.height / 27
-        Layout.leftMargin: p != 0 ? (a == "left" ? -p : a == "right" ? p : 0) : 0
+        Layout.leftMargin: 0
     }
 }
