@@ -362,7 +362,7 @@ choose() {
 
 spin() {
     local ttl="$1"; shift
-    local spinners=("points" "line" "minidots" "jump" "pulse" "globe" "moon" "monkey" "meter" "hamburger")
+    local spinners=("points" "line" "minidot" "jump" "pulse" "globe" "moon" "monkey" "meter" "hamburger")
     local rand_spinner="${spinners[$((RANDOM % ${#spinners[@]}))]}"
     $HAS_GUM && gum spin \
         --spinner "$rand_spinner" \
