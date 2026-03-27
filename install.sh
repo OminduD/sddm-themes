@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # ╔════════════════════════════════════════════════════════════════════╗
-# ║     Hyprlands SDDM Video Themes — install.sh  v2.0               ║
-# ║     Ultra-Premium 23 Cinematic Login Screen Themes                ║
+# ║     Hyprlands SDDM Video Themes — install.sh  v2.5               ║
+# ║     Ultra-Premium 35 Cinematic Login Screen Themes                ║
 # ║     Enhanced TUI with animated banners, dashboards & galleries    ║
 # ╚════════════════════════════════════════════════════════════════════╝
 # Supports: Arch, Fedora, Ubuntu/Debian, openSUSE, Void Linux
 
 set -euo pipefail
 
-readonly VERSION="2.0"
+readonly VERSION="2.5"
 readonly THEME_NAME="hyprlands-video-themes"
 readonly THEMES_DIR="/usr/share/sddm/themes"
 readonly THEME_DST="${THEMES_DIR}/${THEME_NAME}"
@@ -46,6 +46,18 @@ readonly -a THEME_VARIANTS=(
     "under_cherry_tree"
     "dragons_gaze"
     "vi_and_powder"
+    "2b_midnight_bloom"
+    "autumn_cat"
+    "before_the_road"
+    "dragon_bride"
+    "landscape_sea_ships"
+    "rocks_glow_with_autumn_fire"
+    "serenity"
+    "shadowblade_wanderer"
+    "yae_miko_among_the_sakura"
+    "yae_miko_pixel_art2"
+    "zi_ling_a_mortals_journey_to_immortality"
+    "green_fields_and_peaks"
 )
 
 readonly -a THEME_NAMES=(
@@ -72,6 +84,18 @@ readonly -a THEME_NAMES=(
     "🌸  Under Cherry Tree"
     "👁️   Dragon's Gaze"
     "💥  Vi & Powder"
+    "🌸  2B Midnight Bloom"
+    "🐱  Autumn Cat"
+    "🛣️   Before The Road"
+    "👰  Dragon Bride"
+    "⛵  Sea Ships"
+    "🔥  Autumn Fire"
+    "🧘  Serenity"
+    "🗡️   Shadowblade Wanderer"
+    "🦊  Sakura Shrineden"
+    "👾  Yae Pixel Art"
+    "🐉  Mortal's Journey"
+    "⛰️   Green Fields"
 )
 
 # ── Farewell quotes ──
@@ -147,7 +171,7 @@ show_banner() {
     local banner
     read -r -d '' banner << 'BANNER' || true
 
-    ██╗  ██╗██╗   ██╗██████╗ ██████╗ ██╗      █████╗ ███╗   ██╗██████╗ ███████╗
+     ██╗  ██╗██╗   ██╗██████╗ ██████╗ ██╗      █████╗ ███╗   ██╗██████╗ ███████╗
     ██║  ██║╚██╗ ██╔╝██╔══██╗██╔══██╗██║     ██╔══██╗████╗  ██║██╔══██╗██╔════╝
     ███████║ ╚████╔╝ ██████╔╝██████╔╝██║     ███████║██╔██╗ ██║██║  ██║███████╗
     ██╔══██║  ╚██╔╝  ██╔═══╝ ██╔══██╗██║     ██╔══██║██║╚██╗██║██║  ██║╚════██║
@@ -158,26 +182,26 @@ BANNER
     if $HAS_GUM; then
         echo ""
         gum style \
-            --foreground 212 --border-foreground 99 \
+            --foreground 212 --border-foreground 87 \
             --border double --align center --width 80 \
             --margin "0 2" --padding "0 0" \
             "$banner"
         gum style \
-            --foreground 141 --align center --width 80 \
+            --foreground 220 --align center --width 80 \
             --margin "0 2" \
-            "💎  S D D M   V I D E O   T H E M E S  💎" \
+            "⚡  S D D M   V I D E O   T H E M E S  ⚡" \
             "" \
             "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" \
-            "  23 Cinematic Looping Backgrounds  •  v${VERSION}" \
+            "  35 Cinematic Looping Backgrounds  •  v${VERSION}" \
             "  Designed for perfection. Built for r/unixporn." \
             "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     else
         echo ""
-        echo -e "${C_PINK}${C_BOLD}${banner}${C_RESET}"
+        echo -e "${C_CYAN}${C_BOLD}${banner}${C_RESET}"
         echo ""
-        echo -e "  ${C_PURPLE}${C_BOLD}💎  S D D M   V I D E O   T H E M E S  💎${C_RESET}"
+        echo -e "  ${C_YELLOW}${C_BOLD}⚡  S D D M   V I D E O   T H E M E S  ⚡${C_RESET}"
         echo -e "  ${C_DIM}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${C_RESET}"
-        echo -e "  ${C_LAVENDER}  23 Cinematic Looping Backgrounds  •  v${VERSION}${C_RESET}"
+        echo -e "  ${C_PINK}  35 Cinematic Looping Backgrounds  •  v${VERSION}${C_RESET}"
         echo -e "  ${C_GRAY}  Designed for perfection. Built for r/unixporn.${C_RESET}"
         echo -e "  ${C_DIM}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${C_RESET}"
     fi
@@ -210,30 +234,28 @@ show_system_info() {
 
     if $HAS_GUM; then
         gum style \
-            --foreground 87 --border-foreground 75 \
-            --border rounded --align left --width 60 \
+            --foreground 208 --border-foreground 196 \
+            --border double --align left --width 60 \
             --margin "0 3" --padding "0 2" \
-            "  ╔══ 🖥️  SYSTEM DASHBOARD ═══════════════════╗" \
+            "  🔥  SYSTEM DASHBOARD  🔥" \
             "" \
             "  🐧  Distro           │  $distro" \
             "  📦  Package Manager  │  $pm" \
             "  🔹  SDDM Version     │  $sddm_ver" \
-            "  💠  Qt Version        │  $qt_ver" \
-            "  🎨  Active Theme      │  $active_theme" \
-            "  💾  Free Space (/usr) │  $disk_free" \
-            "" \
-            "  ╚══════════════════════════════════════════╝"
+            "  💠  Qt Version       │  $qt_ver" \
+            "  🎨  Active Theme     │  $active_theme" \
+            "  💾  Free Space (/usr)│  $disk_free" \
+            ""
     else
-        echo -e "  ${C_BG_DARK}${C_CYAN}${C_BOLD}  ╔══ 🖥️  SYSTEM DASHBOARD ═══════════════════╗  ${C_RESET}"
+        echo -e "  ${C_BG_DARK}${C_ORANGE}${C_BOLD}  🔥  SYSTEM DASHBOARD  🔥                             ${C_RESET}"
         echo -e "  ${C_BG_DARK}                                                  ${C_RESET}"
-        echo -e "  ${C_BG_DARK}  ${C_WHITE}  🐧  Distro           ${C_DIM}│${C_CYAN}  $distro  ${C_RESET}"
-        echo -e "  ${C_BG_DARK}  ${C_WHITE}  📦  Package Manager  ${C_DIM}│${C_CYAN}  $pm  ${C_RESET}"
-        echo -e "  ${C_BG_DARK}  ${C_WHITE}  🔹  SDDM Version     ${C_DIM}│${C_CYAN}  $sddm_ver  ${C_RESET}"
-        echo -e "  ${C_BG_DARK}  ${C_WHITE}  💠  Qt Version        ${C_DIM}│${C_CYAN}  $qt_ver  ${C_RESET}"
-        echo -e "  ${C_BG_DARK}  ${C_WHITE}  🎨  Active Theme      ${C_DIM}│${C_CYAN}  $active_theme  ${C_RESET}"
-        echo -e "  ${C_BG_DARK}  ${C_WHITE}  💾  Free Space (/usr) ${C_DIM}│${C_CYAN}  $disk_free  ${C_RESET}"
+        echo -e "  ${C_BG_DARK}  ${C_WHITE}  🐧  Distro           ${C_DIM}│${C_YELLOW}  $distro  ${C_RESET}"
+        echo -e "  ${C_BG_DARK}  ${C_WHITE}  📦  Package Manager  ${C_DIM}│${C_YELLOW}  $pm  ${C_RESET}"
+        echo -e "  ${C_BG_DARK}  ${C_WHITE}  🔹  SDDM Version     ${C_DIM}│${C_YELLOW}  $sddm_ver  ${C_RESET}"
+        echo -e "  ${C_BG_DARK}  ${C_WHITE}  💠  Qt Version       ${C_DIM}│${C_YELLOW}  $qt_ver  ${C_RESET}"
+        echo -e "  ${C_BG_DARK}  ${C_WHITE}  🎨  Active Theme     ${C_DIM}│${C_YELLOW}  $active_theme  ${C_RESET}"
+        echo -e "  ${C_BG_DARK}  ${C_WHITE}  💾  Free Space (/usr) ${C_DIM}│${C_YELLOW}  $disk_free  ${C_RESET}"
         echo -e "  ${C_BG_DARK}                                                  ${C_RESET}"
-        echo -e "  ${C_BG_DARK}${C_CYAN}${C_BOLD}  ╚══════════════════════════════════════════╝  ${C_RESET}"
     fi
     echo ""
 }
@@ -329,10 +351,11 @@ confirm() {
 
 choose() {
     $HAS_GUM && gum choose \
-        --cursor.foreground 212 \
+        --cursor=" ❯ " \
+        --cursor.foreground 196 \
         --item.foreground 252 \
-        --selected.foreground 213 \
-        --header.foreground 141 \
+        --selected.foreground 208 \
+        --header.foreground 220 \
         "$@" ||
     { select opt in "$@"; do [[ -n "$opt" ]] && { echo "$opt"; break; }; done; }
 }
@@ -343,21 +366,21 @@ spin() {
     local rand_spinner="${spinners[$((RANDOM % ${#spinners[@]}))]}"
     $HAS_GUM && gum spin \
         --spinner "$rand_spinner" \
-        --spinner.foreground 212 \
-        --title.foreground 140 \
+        --spinner.foreground 196 \
+        --title.foreground 208 \
         --title "  $ttl" -- "$@" ||
-    { echo -e "  ${C_LAVENDER}$ttl${C_RESET}"; "$@"; }
+    { echo -e "  ${C_ORANGE}$ttl${C_RESET}"; "$@"; }
 }
 
 section_header() {
     local icon="$1" title="$2"
     if $HAS_GUM; then
-        gum style --foreground 141 --bold --margin "0 3" \
+        gum style --foreground 220 --bold --margin "0 3" \
             "  $icon  $title"
         gum style --foreground 240 --margin "0 3" \
             "  $(printf '%.0s─' {1..50})"
     else
-        echo -e "\n  ${C_PURPLE}${C_BOLD}  $icon  $title${C_RESET}"
+        echo -e "\n  ${C_YELLOW}${C_BOLD}  $icon  $title${C_RESET}"
         echo -e "  ${C_DIM}  $(printf '%.0s─' {1..50})${C_RESET}"
     fi
 }
@@ -527,15 +550,15 @@ select_variant() {
     local chosen
     if $HAS_GUM; then
         chosen=$(gum filter \
-            --placeholder "🔍  Type to search themes..." \
-            --prompt "❯ " \
-            --indicator "▸" \
-            --match.foreground 212 \
-            --prompt.foreground 141 \
-            --cursor-text.foreground 213 \
-            --header "  Choose a theme variant:" \
-            --header.foreground 87 \
-            --height 15 \
+            --placeholder "🔍  Type to search 35 cinematic themes..." \
+            --prompt " 🔥 " \
+            --indicator "⚡ " \
+            --match.foreground 196 \
+            --prompt.foreground 208 \
+            --cursor-text.foreground 220 \
+            --header "  ✨ Choose a legendary theme variant:" \
+            --header.foreground 208 \
+            --height 20 \
             -- "${THEME_NAMES[@]}")
     else
         chosen=$(choose "${THEME_NAMES[@]}")
@@ -889,7 +912,7 @@ main() {
             "🎨  Select Theme Variant" \
             "👁️   Preview Any Theme  (with comparison)" \
             "✨  Preview Active Theme" \
-            "🖼️   Browse Full Gallery  (all 23 themes)" \
+            "🖼️   Browse Full Gallery  (all 35 themes)" \
             "👤  Setup User Avatar" \
             "┈┈┈┈┈┈┈┈┈ 🔧 ADVANCED TOOLS 🔧 ┈┈┈┈┈┈┈┈┈" \
             "📦  Install Dependencies" \
