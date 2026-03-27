@@ -7,8 +7,8 @@ import QtQuick.Controls 2.15
 Item {
     id: sessionButton
 
-    height: root.font.pointSize
-    width:  parent.width / 2
+    implicitHeight: selectSession.height
+    implicitWidth: selectSession.width
 
     property var    selectedSession: selectSession.currentIndex
     property string textConstantSession
@@ -68,9 +68,9 @@ Item {
         popup: Popup {
             id: popupHandler
             implicitHeight: contentItem.implicitHeight
-            width:   sessionButton.width
+            width:   Math.max(150, displayedItem.implicitWidth + 40)
             y:       parent.height - 1
-            x:       -popupHandler.width/2 + displayedItem.width/2
+            x:       -width/2 + displayedItem.width/2
             padding: 10
 
             contentItem: ListView {
