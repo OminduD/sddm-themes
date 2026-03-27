@@ -10,10 +10,18 @@ Column {
     width: parent.width / 2
     spacing: 4
 
+    // Derive text alignment from form position
+    property bool posLeft:   config.FormPosition == "left"
+    property bool posRight:  config.FormPosition == "right"
+    property int  textAlign: posLeft  ? Text.AlignLeft :
+                             posRight ? Text.AlignRight : Text.AlignHCenter
+    property int  anchorH:   posLeft  ? 0 : posRight ? parent.width : parent.width / 2
+
     // Optional header text from config
     Label {
         id: headerTextLabel
-        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width
+        horizontalAlignment: clock.textAlign
         font.pointSize: root.font.pointSize * 2.2
         color: config.HeaderTextColor
         renderType: Text.QtRendering
@@ -24,7 +32,8 @@ Column {
     // Large animated time display
     Label {
         id: timeLabel
-        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width
+        horizontalAlignment: clock.textAlign
         font.pointSize: root.font.pointSize * 8.5
         font.bold: true
         color: config.TimeTextColor
@@ -49,7 +58,8 @@ Column {
 
     Label {
         id: dateLabel
-        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width
+        horizontalAlignment: clock.textAlign
         color: config.DateTextColor
         font.pointSize: root.font.pointSize * 1.8
         font.bold: true
