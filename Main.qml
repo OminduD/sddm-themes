@@ -26,7 +26,12 @@ Pane {
     palette.highlightedText: config.HighlightTextColor
     palette.buttonText:      config.HoverSystemButtonsIconsColor
 
-    font.family:    config.Font
+    FontLoader {
+        id: localFont
+        source: typeof config.FontFile !== "undefined" && config.FontFile !== "" ? "Fonts/" + config.FontFile : ""
+    }
+
+    font.family:    localFont.status === FontLoader.Ready ? localFont.name : config.Font
     font.pointSize: config.FontSize !== "" ? config.FontSize : parseInt(height / 80) || 13
 
     focus: true
