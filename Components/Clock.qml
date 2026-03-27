@@ -6,16 +6,10 @@ import QtQuick.Controls 2.15
 
 Column {
     id: clock
-
-    width: parent.width / 2
     spacing: 4
 
-    // Derive text alignment from form position
-    property bool posLeft:   config.FormPosition == "left"
-    property bool posRight:  config.FormPosition == "right"
-    property int  textAlign: posLeft  ? Text.AlignLeft :
-                             posRight ? Text.AlignRight : Text.AlignHCenter
-    property int  anchorH:   posLeft  ? 0 : posRight ? parent.width : parent.width / 2
+    // Clock is stretched by the parent layout, so always center the text
+    property int textAlign: Text.AlignHCenter
 
     // Optional header text from config
     Label {
