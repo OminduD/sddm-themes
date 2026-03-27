@@ -2,12 +2,12 @@
 // Based on sddm-astronaut-theme by Keyitdev (GPLv3+)
 // Enhanced with user avatar, particle shimmer, glassmorphism panel
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Window 2.15
-import QtQuick.Controls 2.15
-import QtGraphicalEffects 1.0
-import QtMultimedia 5.15
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Window
+import QtQuick.Controls
+import Qt5Compat.GraphicalEffects
+import QtMultimedia
 import SddmComponents 2.0 as SDDM
 import "Components"
 
