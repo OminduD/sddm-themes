@@ -1,2 +1,0 @@
-file:///home/omindu/Documents/Hyprlands/sddm-themes/test62.qml:2 plugin cannot be loaded for module "QtMultimedia": Cannot protect module QtMultimedia 6 as it was never registered
-
