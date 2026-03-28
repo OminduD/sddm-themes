@@ -175,38 +175,67 @@ show_banner() {
     local banner
     read -r -d '' banner << 'BANNER' || true
 
-     ██╗  ██╗██╗   ██╗██████╗ ██████╗ ██╗      █████╗ ███╗   ██╗██████╗ ███████╗
-    ██║  ██║╚██╗ ██╔╝██╔══██╗██╔══██╗██║     ██╔══██╗████╗  ██║██╔══██╗██╔════╝
-    ███████║ ╚████╔╝ ██████╔╝██████╔╝██║     ███████║██╔██╗ ██║██║  ██║███████╗
-    ██╔══██║  ╚██╔╝  ██╔═══╝ ██╔══██╗██║     ██╔══██║██║╚██╗██║██║  ██║╚════██║
-    ██║  ██║   ██║   ██║     ██║  ██║███████╗██║  ██║██║ ╚████║██████╔╝███████║
-    ╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⠀⠀⠀⢀⣀⣤⣴⣶⣶⣾⣶⣷⣶⣶⡦⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣶⣿⣻⣿⣿⣿⣭⣯⣝⡯⢻⣦⠙⢿⡻⣷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣶⣿⣿⣿⣿⣿⡟⣿⣿⣿⣯⣽⡻⡷⣽⣷⣞⢿⣹⣿⣻⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⢿⡿⣽⣿⢿⣿⣿⡽⣜⢽⢻⣿⡿⣟⣷⣄⡽⢿⣿⡽⣿⣷⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⣾⡇⣾⢹⣿⣿⢺⣽⣿⣿⣿⣿⡕⣮⢹⣿⢳⣾⢻⣭⣿⣿⣿⣿⣾⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⣼⣿⣹⡇⠹⣿⣿⠰⢿⣿⡏⠹⣯⠿⣦⣠⠿⣾⣿⢿⣽⣾⣻⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠳⡀⠀⠀⠀⠀⣰⡿⣷⣿⢧⢑⣿⣾⡇⣀⠸⣿⣆⢽⣷⢋⣿⣷⣷⣽⣻⣿⣻⣿⣿⣿⣿⢿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠱⡄⠀⠀⢀⣿⠃⣟⡏⣦⢻⡟⣧⣿⡬⡓⡜⣿⣮⣿⣞⡬⢿⣿⢿⣿⣿⣿⣿⡟⠙⣂⣎⠙⣻⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠈⢦⠀⢸⡏⠀⣿⣗⣣⣿⡷⠚⢯⣷⡕⢨⡜⢻⣯⢿⣟⠷⣿⣿⣿⣿⣿⣿⠿⢿⠙⣏⣩⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠁⠀⣿⡬⣗⣿⣇⣀⠀⠙⢿⣳⠶⢥⣼⣯⣽⣿⣵⢿⣿⣷⣿⠏⠀⠬⢈⣇⡈⢹⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⢠⣿⡓⣿⣿⣿⣿⣷⣀⠀⠉⠳⠤⢻⣿⣿⣿⣿⣿⣿⣻⢽⣿⣤⣤⣴⣿⣿⣿⣿⡽⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣟⠀⣼⣟⡟⣯⣿⠏⠿⣿⢿⠀⠀⠀⠀⠀⠉⢿⢛⠻⠉⣻⢯⣿⣿⢞⣿⣿⣿⣿⣟⣿⣿⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠋⠹⣴⡟⣾⣿⢿⣿⣇⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠟⣾⣿⣿⣚⣿⣿⣿⣿⣿⣿⣿⣷⠹⡝⣦⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣠⠎⠁⠀⣰⣿⣷⣿⣿⣿⣿⣿⡆⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⢾⣿⣽⣿⣿⣿⣭⣿⣿⣿⣿⣿⣿⣿⣿⡤⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⡴⠃⠀⠀⣴⣿⣟⣿⣿⣿⣿⣿⣿⣿⣄⡀⠀⠺⣿⣿⡶⠀⠀⣠⣾⡿⣿⣿⣿⠟⣻⣿⣿⣿⣿⣿⣿⣯⠁⣠⠇⠀⠀⢦⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⡼⠁⠀⢀⣾⣿⣿⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⣀⠁⢀⣠⠶⠋⠁⠀⣽⣿⠃⣰⣿⣿⣿⣿⣿⣿⣿⣿⣾⣥⣀⣀⣴⡟⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠰⠁⠀⢠⡞⢽⣿⣧⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⡇⢠⠠⡁⠦⢾⡏⣼⣿⣿⢿⢫⣽⣾⣿⣿⣿⣿⣿⣿⡛⠉⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⡟⠀⠘⢿⣿⣿⡿⣿⣿⣿⣿⡿⡿⣿⠃⠈⣷⡟⠁⢸⡁⠀⠀⣤⢶⣿⠀⣿⠟⢁⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢳⠦⣤⣾⢿⣿⣿⣿⣿⣿⠏⠀⠘⣿⠀⢠⠹⢿⡀⠈⠀⢀⣰⠞⠉⠉⢠⡍⠀⢹⣼⣿⣯⣿⣿⣿⣿⣿⣿⣻⣾⡟⢿⡆⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣠⣴⣿⡟⣿⣯⣿⣿⣿⣿⠏⠂⠀⠂⢙⣇⠀⢁⠀⠙⢦⡀⣼⣇⣤⣿⢦⣤⡽⠆⠘⣯⠙⡟⢿⢿⣿⣿⣿⣿⣿⢿⣷⠈⢷⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⣴⣿⣿⡿⢧⣹⣶⣿⣿⣿⣿⠏⠀⠀⣶⡴⠃⠹⣤⣠⣇⣤⣤⣿⣿⣥⣀⣳⣬⢛⣭⣿⢿⣧⢋⡜⠣⡍⠘⣿⣿⣿⣿⣿⣇⢠⡟⠀⠀⠀⠀⠀
+⠀⢀⣜⡿⠋⣿⡏⣿⣷⣿⣿⣿⣿⣿⠏⠀⠀⣠⠟⠀⠀⣴⣿⠋⠁⢀⣿⠙⡁⣀⠧⠤⡿⢻⢆⢻⣾⡷⠿⠞⠛⠉⠀⣿⣿⢿⣿⡽⣿⣯⡀⠀⠀⠀⠀⠀
+⢠⡏⢸⣇⠀⣿⡄⢠⣿⣿⣿⣿⣿⡿⠇⢤⡾⠁⠀⢀⣾⡿⠁⠀⢀⠞⢹⣴⡁⠈⠓⠒⢉⣿⣿⣾⣿⠘⠂⠀⠀⠀⢰⣿⡟⡧⣿⣿⣿⡿⡇⠀⠀⠀⠀⠀
+⠘⢦⣸⣿⣤⡹⣏⢦⣿⣿⣿⣿⡟⠉⢬⡟⠀⠀⢀⣾⠟⠀⠀⠀⠋⠀⠘⡿⢽⣲⠶⠶⣛⡿⢟⢹⡾⠷⣄⠀⠀⠀⣿⣿⣿⣼⢿⣿⣋⢀⡇⠀⠀⠀⠀⠀
+⠀⠀⡙⢿⣿⣿⣿⣷⣿⣿⣿⠟⠀⢠⡟⠀⠀⢠⢏⡟⠀⠀⠀⠀⠀⠀⠀⢿⠰⣲⠮⠟⠉⡔⢌⣾⣇⠀⠙⣆⠀⠀⢸⣿⣿⣿⣿⣿⣿⣏⡀⠀⠀⠀⠀⠀
+⢠⡏⠀⠀⠈⠙⢻⣿⣿⣿⢏⡀⠀⢸⡇⠢⡀⡟⡾⠀⠀⠀⠀⠀⠀⠀⢀⣼⣧⠁⠀⢴⣊⠔⢊⣽⢻⡀⠀⠸⣇⣄⣰⣿⣻⣿⣿⣿⣿⣹⢻⣷⣦⢤⣀⠀
+⠸⣇⠀⠀⠀⢀⣿⢻⣿⠇⢟⡻⣧⣀⡇⢣⢻⣿⠇⠀⢠⠀⠀⢀⣀⣀⣸⢻⡄⡀⠀⠀⠛⠀⠀⡜⣇⣧⠀⠀⠛⢼⣿⣿⣿⣿⣿⣿⣿⣿⡧⠼⣿⣇⠘⠇
+⠀⢹⣿⣷⣺⣯⣿⣿⠋⠠⣎⣰⡡⣙⢷⣂⣿⠾⠀⠰⣾⠟⡛⠭⣉⠦⣹⢿⡄⠀⠀⠀⠀⠀⣼⡑⢦⣿⣲⡦⠄⣿⣿⣽⣿⣿⣿⣿⢿⣿⣿⡷⣹⣿⣇⠀
+⠀⠀⠙⠻⠷⠿⠿⠁⠀⠀⣀⣉⣙⠛⣻⡿⣇⡍⢣⢃⣿⡜⢨⠅⡃⠔⣿⣿⠠⠁⠀⠀⠀⢸⢣⠜⣶⢇⢻⢻⡔⣿⣿⣿⣿⣽⣿⣿⣿⣿⣿⣿⠼⣿⣿⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠲⣿⣬⢙⡹⢛⢿⣅⠘⢯⣃⢯⡿⡜⡳⢮⡑⠎⣿⣿⠀⠀⠀⢀⣴⢿⣣⡿⠋⣢⠿⠈⢷⢻⣿⣿⣿⣷⢻⣿⣿⣿⣿⣿⡽⠋⠁⣵
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⢧⣼⡍⡾⡻⣿⣔⡌⢢⣿⠰⡱⢆⠱⢊⣹⢽⣆⣀⣶⠿⠛⠋⠁⢀⣼⡧⡘⢆⡘⣿⣿⣿⣿⣿⢷⢾⣽⣿⣯⣁⣀⣀⣴⡷
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠳⢧⣭⣛⣾⢡⣿⢑⡘⣌⠳⣬⡘⣿⣿⠫⣅⢒⡐⢦⡐⡌⣻⡴⡙⣬⢱⢸⣿⣿⣿⣿⣏⡾⣿⣿⡛⠛⠛⠛⠉⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠓⠻⠿⢦⣵⣨⣑⣩⣿⣽⢿⡳⡌⠦⡙⠴⡘⠴⣉⢿⣾⣶⣶⣿⣿⣿⣿⣿⣾⡗⣿⣿⡇⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠙⠋⠛⠻⢽⣣⠝⡲⣍⠖⡍⢦⠋⣿⠿⡿⠿⢛⣱⣿⣿⣽⣿⣽⡇⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⢵⣌⣮⣙⡴⠟⠹⢤⣤⣶⣿⣿⣟⣿⡿⠿⠛⠁⠀⠀⠀⠀⠀
 BANNER
 
     if $HAS_GUM; then
         echo ""
         gum style \
-            --foreground 212 --border-foreground 87 \
-            --border double --align center --width 80 \
-            --margin "0 2" --padding "0 0" \
+            --foreground 196 \
+            --align center \
             "$banner"
         gum style \
-            --foreground 220 --align center --width 80 \
-            --margin "0 2" \
-            "⚡  S D D M   V I D E O   T H E M E S  ⚡" \
+            --foreground 220 --border-foreground 196 \
+            --border double --align center --width 80 \
+            --margin "1 2" --padding "1 2" \
+            "⚡  H Y P R L A N D S   A E S T H E T I C S  ⚡" \
             "" \
             "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" \
             "  37 Cinematic Looping Backgrounds  •  v${VERSION}" \
-            "  Designed for perfection. Built for r/unixporn." \
+            "  Elevate your login. Built for r/unixporn." \
             "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     else
         echo ""
-        echo -e "${C_CYAN}${C_BOLD}${banner}${C_RESET}"
+        echo -e "${C_RED}${C_BOLD}${banner}${C_RESET}"
         echo ""
-        echo -e "  ${C_YELLOW}${C_BOLD}⚡  S D D M   V I D E O   T H E M E S  ⚡${C_RESET}"
+        echo -e "  ${C_ORANGE}${C_BOLD}⚡  H Y P R L A N D S   A E S T H E T I C S  ⚡${C_RESET}"
         echo -e "  ${C_DIM}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${C_RESET}"
         echo -e "  ${C_PINK}  37 Cinematic Looping Backgrounds  •  v${VERSION}${C_RESET}"
-        echo -e "  ${C_GRAY}  Designed for perfection. Built for r/unixporn.${C_RESET}"
+        echo -e "  ${C_GRAY}  Elevate your login. Built for r/unixporn.${C_RESET}"
         echo -e "  ${C_DIM}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${C_RESET}"
     fi
     echo ""
@@ -489,6 +518,15 @@ install_fonts() {
     local tmp_fonts; tmp_fonts=$(mktemp -d)
     declare -A FONT_URLS=(
         ["Electroharmonix.otf"]="https://github.com/Keyitdev/sddm-astronaut-theme/raw/master/Fonts/Electroharmonix.otf"
+        ["Doto-Black.ttf"]="https://github.com/google/fonts/raw/main/ofl/doto/Doto-Black.ttf"
+        ["Doto-Bold.ttf"]="https://github.com/google/fonts/raw/main/ofl/doto/Doto-Bold.ttf"
+        ["Doto-Regular.ttf"]="https://github.com/google/fonts/raw/main/ofl/doto/Doto-Regular.ttf"
+        ["Doto-Thin.ttf"]="https://github.com/google/fonts/raw/main/ofl/doto/Doto-Thin.ttf"
+        ["Creepster-Regular.ttf"]="https://github.com/google/fonts/raw/main/ofl/creepster/Creepster-Regular.ttf"
+        ["HomemadeApple-Regular.ttf"]="https://github.com/google/fonts/raw/main/apache/homemadeapple/HomemadeApple-Regular.ttf"
+        ["MeaCulpa-Regular.ttf"]="https://github.com/google/fonts/raw/main/ofl/meaculpa/MeaCulpa-Regular.ttf"
+        ["Monoton-Regular.ttf"]="https://github.com/google/fonts/raw/main/ofl/monoton/Monoton-Regular.ttf"
+        ["Silkscreen-Bold.ttf"]="https://github.com/google/fonts/raw/main/ofl/silkscreen/Silkscreen-Bold.ttf"
     )
     for fname in "${!FONT_URLS[@]}"; do
         if [[ ! -f "$font_dst/$fname" ]]; then
