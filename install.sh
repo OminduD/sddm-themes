@@ -168,7 +168,7 @@ error() {
 }
 
 # ══════════════════════════════════════════════════════════════════════
-# ASCII Art Banner — the crown jewel
+# UI Layout components
 # ══════════════════════════════════════════════════════════════════════
 show_banner() {
     clear
@@ -212,22 +212,54 @@ show_banner() {
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⢵⣌⣮⣙⡴⠟⠹⢤⣤⣶⣿⣿⣟⣿⡿⠿⠛⠁⠀⠀⠀⠀⠀
 BANNER
 
+    local pm; pm=$(detect_pm)
+    local sddm_ver="not installed"
+    command -v sddm &>/dev/null && sddm_ver=$(sddm --version 2>/dev/null | head -1 || echo "unknown")
+    local qt_ver="not found"
+    if command -v qmake6 &>/dev/null; then qt_ver=$(qmake6 --version 2>/dev/null | grep -oP 'Qt version \\K[\\d.]+' || echo "unknown")
+    elif command -v qmake &>/dev/null; then qt_ver=$(qmake --version 2>/dev/null | grep -oP 'Qt version \\K[\\d.]+' || echo "unknown"); fi
+    local active_theme="none"
+    [[ -f "$METADATA" ]] && active_theme=$(sed -n 's|^ConfigFile=Themes/\\(.*\\)\\.conf|\\1|p' "$METADATA" 2>/dev/null || echo "none")
+    local disk_free; disk_free=$(df -h /usr/share 2>/dev/null | awk 'NR==2 {print $4}' || echo "??")
+    local distro="Unknown"
+    [[ -f /etc/os-release ]] && distro=$(. /etc/os-release && echo "${PRETTY_NAME:-$NAME}")
+
     if $HAS_GUM; then
-        echo ""
-        gum style \
-            --foreground 196 \
-            --align center \
-            "$banner"
-        gum style \
+        local art_str
+        art_str=$(gum style --foreground 196 --align left "$banner")
+        
+        local title_str
+        title_str=$(gum style \
             --foreground 220 --border-foreground 196 \
-            --border double --align center --width 80 \
-            --margin "1 2" --padding "1 2" \
-            "⚡  H Y P R L A N D S   A E S T H E T I C S  ⚡" \
-            "" \
-            "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" \
-            "  37 Cinematic Looping Backgrounds  •  v${VERSION}" \
-            "  Elevate your login. Built for r/unixporn." \
-            "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            --border double --align center --width 60 \
+            --margin "0 0" --padding "0 1" \
+            "⚡  H Y P R L A N D S   A E S T H E T I C S  ⚡" "" \
+            "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" \
+            "37 Cinematic Looping Backgrounds • v${VERSION}" \
+            "Elevate your login. Built for r/unixporn." \
+            "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+            
+        local sys_str
+        sys_str=$(gum style \
+            --foreground 208 --border-foreground 196 \
+            --border double --align left --width 60 \
+            --margin "1 0" --padding "0 1" \
+            "  🔥  SYSTEM DASHBOARD  🔥" "" \
+            "  🐧  Distro           │  $distro" \
+            "  📦  Package Manager  │  $pm" \
+            "  🔹  SDDM Version     │  $sddm_ver" \
+            "  💠  Qt Version       │  $qt_ver" \
+            "  🎨  Active Theme     │  $active_theme" \
+            "  💾  Free Space (/usr)│  $disk_free")
+            
+        local right_col
+        right_col=$(gum join --vertical --align center "$title_str" "$sys_str")
+        local final_layout
+        final_layout=$(gum join --horizontal --align top "$art_str" "   " "$right_col")
+        
+        echo ""
+        echo "$final_layout"
+        echo ""
     else
         echo ""
         echo -e "${C_RED}${C_BOLD}${banner}${C_RESET}"
@@ -237,49 +269,6 @@ BANNER
         echo -e "  ${C_PINK}  37 Cinematic Looping Backgrounds  •  v${VERSION}${C_RESET}"
         echo -e "  ${C_GRAY}  Elevate your login. Built for r/unixporn.${C_RESET}"
         echo -e "  ${C_DIM}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${C_RESET}"
-    fi
-    echo ""
-}
-
-# ══════════════════════════════════════════════════════════════════════
-# System Info Dashboard
-# ══════════════════════════════════════════════════════════════════════
-show_system_info() {
-    local pm; pm=$(detect_pm)
-    local sddm_ver="not installed"
-    command -v sddm &>/dev/null && sddm_ver=$(sddm --version 2>/dev/null | head -1 || echo "unknown")
-    
-    local qt_ver="not found"
-    if command -v qmake6 &>/dev/null; then
-        qt_ver=$(qmake6 --version 2>/dev/null | grep -oP 'Qt version \K[\d.]+' || echo "unknown")
-    elif command -v qmake &>/dev/null; then
-        qt_ver=$(qmake --version 2>/dev/null | grep -oP 'Qt version \K[\d.]+' || echo "unknown")
-    fi
-
-    local active_theme="none"
-    [[ -f "$METADATA" ]] && active_theme=$(sed -n 's|^ConfigFile=Themes/\(.*\)\.conf|\1|p' "$METADATA" 2>/dev/null || echo "none")
-
-    local disk_free
-    disk_free=$(df -h /usr/share 2>/dev/null | awk 'NR==2 {print $4}' || echo "??")
-
-    local distro="Unknown"
-    [[ -f /etc/os-release ]] && distro=$(. /etc/os-release && echo "${PRETTY_NAME:-$NAME}")
-
-    if $HAS_GUM; then
-        gum style \
-            --foreground 208 --border-foreground 196 \
-            --border double --align left --width 60 \
-            --margin "0 3" --padding "0 2" \
-            "  🔥  SYSTEM DASHBOARD  🔥" \
-            "" \
-            "  🐧  Distro           │  $distro" \
-            "  📦  Package Manager  │  $pm" \
-            "  🔹  SDDM Version     │  $sddm_ver" \
-            "  💠  Qt Version       │  $qt_ver" \
-            "  🎨  Active Theme     │  $active_theme" \
-            "  💾  Free Space (/usr)│  $disk_free" \
-            ""
-    else
         echo -e "  ${C_BG_DARK}${C_ORANGE}${C_BOLD}  🔥  SYSTEM DASHBOARD  🔥                             ${C_RESET}"
         echo -e "  ${C_BG_DARK}                                                  ${C_RESET}"
         echo -e "  ${C_BG_DARK}  ${C_WHITE}  🐧  Distro           ${C_DIM}│${C_YELLOW}  $distro  ${C_RESET}"
@@ -289,10 +278,9 @@ show_system_info() {
         echo -e "  ${C_BG_DARK}  ${C_WHITE}  🎨  Active Theme     ${C_DIM}│${C_YELLOW}  $active_theme  ${C_RESET}"
         echo -e "  ${C_BG_DARK}  ${C_WHITE}  💾  Free Space (/usr) ${C_DIM}│${C_YELLOW}  $disk_free  ${C_RESET}"
         echo -e "  ${C_BG_DARK}                                                  ${C_RESET}"
+        echo ""
     fi
-    echo ""
 }
-
 # ══════════════════════════════════════════════════════════════════════
 # Progress Bar
 # ══════════════════════════════════════════════════════════════════════
@@ -945,7 +933,6 @@ main() {
 
     while true; do
         show_banner
-        show_system_info
 
         local choice; choice=$(choose \
             "┈┈┈┈┈┈┈┈┈┈ ⚡ QUICK ACTIONS ⚡ ┈┈┈┈┈┈┈┈┈┈" \
