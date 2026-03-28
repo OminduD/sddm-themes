@@ -1,13 +1,26 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/Keyitdev/sddm-astronaut-theme/master/Fonts/astronaut.svg" width="100" height="100" alt="Logo" style="display:none;"/>
-  <h1>🌌 Hyprlands Video Themes 🌌</h1>
   
+  <br/>
+  
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=40&pause=1000&color=F72C65&center=true&vCenter=true&width=600&lines=🌌+Hyprlands+Video+Themes+🌌;Cinematic+SDDM+Login;Dynamic+Motion+Aesthetics;23+Unique+Premium+Themes" alt="Typing SVG" />
+  
+  <br/>
+  <br/>
+
   <p><b>A highly customizable, cinematic SDDM theme collection featuring 23 unique video backgrounds.</b></p>
   
+  <br/>
+  
   <p>
-    <img alt="Platform" src="https://img.shields.io/badge/Platform-Linux-blue?style=for-the-badge&logo=linux"/>
-    <img alt="License" src="https://img.shields.io/badge/License-GPLv3-green?style=for-the-badge"/>
-    <img alt="SDDM" src="https://img.shields.io/badge/SDDM-Theme-ff69b4?style=for-the-badge&logo=kde"/>
+    <a href="https://github.com/omindu/sddm-themes/stargazers">
+      <img alt="Stars" src="https://img.shields.io/github/stars/omindu/sddm-themes?style=for-the-badge&color=ffb86c&logo=github"/>
+    </a>
+    <img alt="Platform" src="https://img.shields.io/badge/Platform-Linux-8be9fd?style=for-the-badge&logo=linux"/>
+    <a href="./LICENSE">
+      <img alt="License" src="https://img.shields.io/badge/License-GPLv3-50fa7b?style=for-the-badge"/>
+    </a>
+    <img alt="SDDM" src="https://img.shields.io/badge/SDDM-Theme-ff79c6?style=for-the-badge&logo=kde"/>
   </p>
 </div>
 
@@ -15,7 +28,11 @@
 
 <div align="center">
   <i>Elevate your login screen with dynamic, minimal, and premium aesthetic visuals.</i>
+  <br/><br/>
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Star-Struck.png" alt="Star-Struck" width="45" />
 </div>
+
+<br/>
 
 ---
 
@@ -34,48 +51,17 @@
 
 Choose from a massive curated list of 23 unique visual variants, ranging from Cyberpunk aesthetics to serene Japanese landscapes:
 
-<table>
-  <tr>
-    <td>🐉 <b>Blind Dragon</b></td>
-    <td>👦🐉 <b>Boy and Dragon</b></td>
-    <td>☁️🏰 <b>Cloud Castle</b></td>
-  </tr>
-  <tr>
-    <td>🌙 <b>Crimson Moon</b></td>
-    <td>🚶‍♂️🌅 <b>Dawn Wanderer</b></td>
-    <td>🤖 <b>Digital Shadows</b></td>
-  </tr>
-  <tr>
-    <td>👁️‍🗨️🐉 <b>Dragon's Gaze</b></td>
-    <td>👧 <b>Evelyn</b></td>
-    <td>🚗🌃 <b>Evening Drive</b></td>
-  </tr>
-  <tr>
-    <td>🪈 <b>Fantasy Flute</b></td>
-    <td>🌤️ <b>Golden Hour</b></td>
-    <td>🌸 <b>Japanese Spring</b></td>
-  </tr>
-  <tr>
-    <td>🏔️ <b>Majestic Peaks</b></td>
-    <td>🌊🌕 <b>Moonlight Seascape</b></td>
-    <td>⛰️🌅 <b>Mountain Horizon</b></td>
-  </tr>
-  <tr>
-    <td>🌌 <b>Nebula Black Hole</b></td>
-    <td>🗡️ <b>Samurai Spirit</b></td>
-    <td>🌳 <b>Samurai Tree</b></td>
-  </tr>
-  <tr>
-    <td>🚂🌇 <b>Sunset Train</b></td>
-    <td>🎭 <b>Torn Mask</b></td>
-    <td>🏞️ <b>Tranquil Lake</b></td>
-  </tr>
-  <tr>
-    <td>🌸🌳 <b>Under Cherry Tree</b></td>
-    <td>👊💥 <b>Vi and Powder</b></td>
-    <td></td>
-  </tr>
-</table>
+| 🐉 **Blind Dragon** | 👦🐉 **Boy and Dragon** | ☁️🏰 **Cloud Castle** |
+| :---: | :---: | :---: |
+| 🌙 **Crimson Moon** | 🚶‍♂️🌅 **Dawn Wanderer** | 🤖 **Digital Shadows** |
+| 👁️‍🗨️🐉 **Dragon's Gaze**| 👧 **Evelyn** | 🚗🌃 **Evening Drive** |
+| 🪈 **Fantasy Flute** | 🌤️ **Golden Hour** | 🌸 **Japanese Spring** |
+| 🏔️ **Majestic Peaks** | 🌊🌕 **Moonlight Seascape**| ⛰️🌅 **Mountain Horizon** |
+| 🌌 **Nebula Black Hole**| 🗡️ **Samurai Spirit** | 🌳 **Samurai Tree** |
+| 🚂🌇 **Sunset Train** | 🎭 **Torn Mask** | 🏞️ **Tranquil Lake** |
+| 🌸🌳 **Under Cherry Tree**| 👊💥 **Vi and Powder** | |
+
+*(Want to add yours? See [Contributing](#-contributing)!)*
 
 ---
 
@@ -116,6 +102,18 @@ Example settings you can change:
 
 ---
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" alt="Handshake" width="60" />
+</div>
+
+## 🤝 Contributing
+
+We love contributions from the community! Whether it's adding a new stunning video background, fixing a QML bug, or improving documentation, your help is welcome.
+
+Please read our [Contributing Guidelines](CONTRIBUTING.md) to get started on submitting an issue or pull request.
+
+---
+
 ## 🙌 Credits & Acknowledgements
 
 A massive shoutout to the open-source Linux community. This project’s architecture, QML logic, and modularity would not have been possible without the brilliant work behind the **SDDM Astronaut Theme**. 
@@ -127,5 +125,7 @@ Make sure to check out their repository and drop a star!
 ---
 
 <div align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="35" />
   <p>Made with ❤️ for r/unixporn and the ricing community</p>
+  <p>Licensed under <b><a href="LICENSE">GPL-3.0</a></b></p>
 </div>
