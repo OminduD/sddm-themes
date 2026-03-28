@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ╔════════════════════════════════════════════════════════════════════╗
 # ║     Hyprlands SDDM Video Themes — install.sh  v2.5               ║
-# ║     Ultra-Premium 35 Cinematic Login Screen Themes                ║
+# ║     Ultra-Premium 37 Cinematic Login Screen Themes                ║
 # ║     Enhanced TUI with animated banners, dashboards & galleries    ║
 # ╚════════════════════════════════════════════════════════════════════╝
 # Supports: Arch, Fedora, Ubuntu/Debian, openSUSE, Void Linux
@@ -58,6 +58,8 @@ readonly -a THEME_VARIANTS=(
     "yae_miko_pixel_art2"
     "zi_ling_a_mortals_journey_to_immortality"
     "green_fields_and_peaks"
+    "japanese_room_in_autumn"
+    "motorcycle_girl_chaos"
 )
 
 readonly -a THEME_NAMES=(
@@ -96,6 +98,8 @@ readonly -a THEME_NAMES=(
     "👾  Yae Pixel Art"
     "🐉  Mortal's Journey"
     "⛰️   Green Fields"
+    "🍁  Japanese Room"
+    "🏍️   Motorcycle Chaos"
 )
 
 # ── Farewell quotes ──
@@ -192,7 +196,7 @@ BANNER
             "⚡  S D D M   V I D E O   T H E M E S  ⚡" \
             "" \
             "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" \
-            "  35 Cinematic Looping Backgrounds  •  v${VERSION}" \
+            "  37 Cinematic Looping Backgrounds  •  v${VERSION}" \
             "  Designed for perfection. Built for r/unixporn." \
             "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     else
@@ -201,7 +205,7 @@ BANNER
         echo ""
         echo -e "  ${C_YELLOW}${C_BOLD}⚡  S D D M   V I D E O   T H E M E S  ⚡${C_RESET}"
         echo -e "  ${C_DIM}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${C_RESET}"
-        echo -e "  ${C_PINK}  35 Cinematic Looping Backgrounds  •  v${VERSION}${C_RESET}"
+        echo -e "  ${C_PINK}  37 Cinematic Looping Backgrounds  •  v${VERSION}${C_RESET}"
         echo -e "  ${C_GRAY}  Designed for perfection. Built for r/unixporn.${C_RESET}"
         echo -e "  ${C_DIM}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${C_RESET}"
     fi
