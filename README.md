@@ -1,55 +1,53 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Keyitdev/sddm-astronaut-theme/master/Fonts/astronaut.svg" width="100" height="100" alt="Logo" style="display:none;"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=00FF99&height=200&section=header&text=ZenMatrix%20Collection&fontSize=60&animation=twinkling&fontAlignY=35&desc=The%20Ultimate%20Login%20Experience&descAlignY=55&descAlign=50" width="100%" alt="Header" />
   
   <br/>
   
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=40&pause=1000&color=F72C65&center=true&vCenter=true&width=800&lines=🌌+Hyprlands+Video+Themes+🌌;Cinematic+SDDM+Login+Experience;Dynamic+Motion+%26+Aesthetics;37+Unique+Premium+Backgrounds" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=40&pause=1000&color=00FFFF&center=true&vCenter=true&width=900&lines=⚡+Cinematic+SDDM+Login+Experience+⚡;🚀+Dynamic+Motion+%26+Next-Gen+Aesthetics;🎨+37+Unique+Premium+Backgrounds;🔥+Drop-in+Ready+for+Your+Rice" alt="Typing SVG" />
   
   <br/>
   <br/>
 
-  <p><b>A highly customizable, cinematic SDDM theme collection featuring 37 stunning video backgrounds.</b></p>
-  
-  <br/>
-  
   <p>
     <a href="https://github.com/omindu/sddm-themes/stargazers">
-      <img alt="Stars" src="https://img.shields.io/github/stars/omindu/sddm-themes?style=for-the-badge&color=ffb86c&logo=github&logoColor=white"/>
+      <img alt="Stars" src="https://img.shields.io/github/stars/omindu/sddm-themes?style=for-the-badge&color=00FF99&logo=github&logoColor=black"/>
     </a>
     <img alt="Platform" src="https://img.shields.io/badge/Platform-Linux-8be9fd?style=for-the-badge&logo=linux&logoColor=black"/>
     <a href="./LICENSE">
-      <img alt="License" src="https://img.shields.io/badge/License-GPLv3-50fa7b?style=for-the-badge"/>
+      <img alt="License" src="https://img.shields.io/badge/License-GPLv3-00FF99?style=for-the-badge"/>
     </a>
     <img alt="SDDM" src="https://img.shields.io/badge/SDDM-Theme-ff79c6?style=for-the-badge&logo=kde&logoColor=white"/>
   </p>
+
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Star-Struck.png" alt="Star-Struck" width="45" />
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="45" />
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" alt="Laptop" width="45" />
 </div>
-
-<br/>
-
-<div align="center">
-  <i>Elevate your login screen with dynamic, minimal, and premium aesthetic visuals.</i>
-  <br/><br/>
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Star-Struck.png" alt="Star-Struck" width="50" />
-</div>
-
-<br/>
 
 ---
 
-## ✨ Key Features
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Sparkles.png" width="35" align="center" /> Why ZenMatrix?
 
-- **🎬 37 Looping Video Backgrounds:** Immersive and high-quality visuals covering Anime, Cyberpunk, Nature, and Fantasy right from the login screen.
-- **🛠️ Fully Interactive Installer:** A powerful, built-in TUI script (`install.sh`) handles everything—from resolving dependencies to live-previewing themes.
-- **🎨 Dynamic QML UI:** Modular components allowing left, center, or right alignments based on your preferred configuration.
-- **👤 Modern Avatars:** Profile picture support with an animated, glowing fallback ring.
-- **🖥️ Multi-Session Support:** Dropdown for Window Managers (Hyprland, Sway) or Desktop Environments (KDE, GNOME).
-- **⌨️ Virtual Keyboard Support:** Built-in toggle for touch-friendly virtual keyboard inputs.
+Transform your lock screen into a gateway to another dimension. ZenMatrix isn't just a theme; it's a completely modular, hardware-accelerated, and cinematic experience tailored for modern Linux rices.
+
+### 🚀 Next-Level Features
+
+- **🎬 37 Looping Video Backgrounds:** High-quality, seamlessly looping visuals spanning Anime, Cyberpunk, Nature, and Fantasy.
+- **⚡ Hardware Accelerated Playback:** Fluid animations powered by Qt Multimedia with a minimal CPU/GPU footprint.
+- **🛠️ Interactive TUI Installer:** One script to rule them all—resolves dependencies, handles theme selection, and provides instant live previews.
+- **🎨 Dynamic QML Architecture:** Fully responsive. Form components automatically snap and align (`left`, `center`, `right`) based on your configuration.
+- **👤 Intelligent Avatars:** Circular profile pictures featuring animated, glowing ambient borders with sleek fallback elements.
+- **🖥️ Omnipresent Session Support:** Smart dropdown menu detecting all Window Managers (Hyprland, Sway, Qtile) and DEs (KDE, GNOME).
+- **⌨️ Universal Input Ready:** Integrated toggle for on-screen touch and virtual keyboard interactions.
+- **🕰️ Customizable Widgets:** Granular control over date, time, clock formats, sizes, and font rendering.
+- **🪄 Auto-Blur Magic:** Configurable dynamic glass-morphism effects and ambient background blurring.
+- **⚙️ Hot-Swappable Configs:** Change your entire login experience instantly by editing lightweight `.conf` preset files.
 
 ---
 
-## 🎭 The Themes Collection (37 Variations)
+## 🎭 The ZenMatrix Collection
 
-Choose from a massive curated list of 37 unique visual variants. Whether you want to drift through a Cyberpunk metropolis or relax by a tranquil Japanese lake, there is a theme for your vibe:
+Dive into 37 meticulously curated dimensions. Find the perfect vibe to match your dotfiles:
 
 | | | |
 | :--- | :--- | :--- |
@@ -67,71 +65,47 @@ Choose from a massive curated list of 37 unique visual variants. Whether you wan
 | 👊💥 **Vi And Powder** | 🦊🌸 **Yae Miko Among The Sakura**| 🦊🎮 **Yae Miko Pixel Art 2** |
 | 🪷🏔️ **Zi Ling A Mortals Journey**| | |
 
-*(Got an epic 4K animated loop? Add yours by following our [Contributing Guide](CONTRIBUTING.md)!)*
+*(Got an epic 4K animated loop? Request to add yours by following our [Contributing Guide](CONTRIBUTING.md)!)*
 
 ---
 
-## 🚀 Installation & Usage
+## ⚙️ Quick Start
 
-> **Note:** Root privileges are required to copy themes into your system's SDDM directory (`/usr/share/sddm/themes/`).
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Wrench.png" width="30" align="center" /> **Installation is fully automated.** (Requires `sudo` access to install into `/usr/share/sddm/themes/`)
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/omindu/sddm-themes.git
-   cd sddm-themes
-   ```
+```bash
+git clone https://github.com/omindu/sddm-themes.git
+cd sddm-themes
+sudo ./install.sh
+```
 
-2. **Launch the Installer:**
-   ```bash
-   sudo ./install.sh
-   ```
-
-3. **Follow the TUI Prompt Options:**
-   The interactive terminal UI will guide you gracefully through:
-   - Installing required module dependencies (Qt5 / Qt6 plugins).
-   - Exploring and selecting from the **37** available visual themes.
-   - Adjusting layout positioning (Left, Center, Right).
-   - Configuring clock fonts, sizes, and behaviors.
-   - Launching a **Live Preview** of your final setup instantly.
+Follow the gracefully designed TUI prompt options to select your theme, set your layout visually, and live-preview your setup!
 
 ---
 
-## ⚙️ Manual Configuration
+## 🔧 Advanced Tweaking
 
-Once installed, you can modify your theme easily by editing its `.conf` file located in `/usr/share/sddm/themes/hyprlands-video-themes/Themes/`.
+Modify your deployed theme easily by editing its `.conf` file deeply located in `/usr/share/sddm/themes/zenmatrix-collection/Themes/`.
 
-**Example tweakable settings:**
-- `FormPosition`: Change login box alignment (`left`, `center`, `right`).
-- `Font`: Set a custom global font family.
-- `BlurRadius`: Adjust the ambient background blur intensity behind the UI elements.
-- `TimeFormat` & `DateFormat`: Personalize how the clock and date are displayed.
-
----
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" alt="Handshake" width="60" />
-</div>
-
-## 🤝 Contributing
-
-We love contributions from the ricing community! Whether it's adding a new stunning video background, fixing a QML bug, or improving the bash installer, your help is totally welcome.
-
-Please read our [Contributing Guidelines](CONTRIBUTING.md) to get started on submitting an issue or pull request.
+**Tweakable settings overview:**
+| Parameter | Description |
+| :--- | :--- |
+| `FormPosition` | Box alignment (`left`, `center`, or `right`) |
+| `Font` | Typography family (e.g. `Fira Code`, `JetBrains Mono`) |
+| `BlurRadius` | Frosted glass intensity (0 = disabled, 50 = heavy blur) |
+| `TimeFormat` & `DateFormat` | Overrides for time output displaying (e.g., `hh:mm AP`) |
 
 ---
 
-## 🙌 Credits & Acknowledgements
+## 🤝 Community & Contributions
 
-A massive shoutout to the open-source Linux community. This project’s architecture, QML logic, and modularity would not have been possible without the brilliant framework established by the **SDDM Astronaut Theme**. 
-
-🌟 **Original Inspiration & Codebase Foundation:** [Keyitdev / sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme)
-
-Be sure to check out their repository and drop a star!
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="40" align="center" /> We invite and love contributions from the ricing community! Whether it's adding a new stunning video background, fixing a QML bug, or improving the bash installer, your help is totally welcome. Read our [Contributing Guidelines](CONTRIBUTING.md) to dive in.
 
 ---
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" />
-  <p><b>Designed with ❤️ for r/unixporn and the global ricing community</b></p>
+e original baseline architecture: <a href="https://github.com/Keyitdev/sddm-astronaut-theme">Keyitdev's SDDM Astronaut</a></i>
+  <br/>
   <p>Licensed under <b><a href="LICENSE">GPL-3.0</a></b></p>
 </div>

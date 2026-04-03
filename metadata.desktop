@@ -1,5 +1,5 @@
 [SddmGreeterTheme]
-Name=Hyprlands Video Themes
+Name=ZenMatrix Collection
 Description=Cinematic SDDM themes with looping video backgrounds, user avatars and WM session selection. Three East-Asian aesthetic variants: Ancient China Lantern, Cherry Blossom, Serene Bamboo Forest.
 Author=Hyprlands
 Version=1.0.0
@@ -8,4 +8,4 @@ Website=https://github.com/omindu/sddm-themes
 Screenshot=preview.png
 MainScript=Main.qml
 ConfigFile=Themes/ancient_china_lantern.conf
-Id=hyprlands-video-themes
+Id=zenmatrix-collection
