@@ -3,10 +3,9 @@
   
   <br/>
   
-  <a href="#">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&pause=1000&color=00FFFF&center=true&vCenter=true&width=900&lines=%E2%9A%A1+Cinematic+SDDM+Login+Experience+%E2%9A%A1;%F0%9F%9A%80+Dynamic+Motion+and+Next-Gen+Aesthetics;%F0%9F%8E%A8+37+Unique+Premium+Looping+Backgrounds;%F0%9F%94%A5+Drop-in+Ready+for+Your+Rice;%F0%9F%8E%9B%EF%B8%8F+Dynamic+Video+Playlists" alt="Typing SVG" />
+  <a href="https://github.com/omindu/sddm-themes">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=25&pause=1000&color=00FFFF&center=true&vCenter=true&width=900&lines=Cinematic+SDDM+Login+Experience;Dynamic+Motion+and+Next-Gen+Aesthetics;37+Unique+Premium+Looping+Backgrounds;Drop-in+Ready+for+Your+Rice;Dynamic+Video+Playlists" alt="Typing SVG" />
   </a>
-  <br/>
   <br/>
 
   <p>
@@ -54,9 +53,9 @@ Preview the 37 meticulously curated dimensions below. These backgrounds are rend
 
 | 2B Midnight Bloom | Boy And Dragon | Evelyn |
 | :---: | :---: | :---: |
-| <video src="Backgrounds/2b_midnight_bloom.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/boy_and_dragon.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/evelyn.mp4" autoplay loop muted width="100%"></video> |
+| <video src="https://github.com/omindu/sddm-themes/raw/main/Backgrounds/2b-midnight-bloom.mp4" autoplay loop muted width="100%"></video> | <video src="https://github.com/omindu/sddm-themes/raw/main/Backgrounds/anime-boy-and-dragon.mp4" autoplay loop muted width="100%"></video> | <video src="https://github.com/omindu/sddm-themes/raw/main/Backgrounds/evelyn.mp4" autoplay loop muted width="100%"></video> |
 | **Fantasy Flute** | **Vi And Powder** | **Yae Miko Pixel** |
-| <video src="Backgrounds/fantasy_flute.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/vi_and_powder.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/yae_miko_pixel_art2.mp4" autoplay loop muted width="100%"></video> |
+| <video src="https://github.com/omindu/sddm-themes/raw/main/Backgrounds/fantasy-flute-sunset-scene.mp4" autoplay loop muted width="100%"></video> | <video src="https://github.com/omindu/sddm-themes/raw/main/Backgrounds/vi-and-powder.mp4" autoplay loop muted width="100%"></video> | <video src="https://github.com/omindu/sddm-themes/raw/main/Backgrounds/yae-miko-pixel-art2.mp4" autoplay loop muted width="100%"></video> |
 
 </details>
 
@@ -65,7 +64,7 @@ Preview the 37 meticulously curated dimensions below. These backgrounds are rend
 
 | Digital Shadows | Nebula Black Hole | Motorcycle Girl Chaos | Shadowblade Wanderer |
 | :---: | :---: | :---: | :---: |
-| <video src="Backgrounds/digital_shadows.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/nebula_black_hole.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/motorcycle_girl_chaos.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/shadowblade_wanderer.mp4" autoplay loop muted width="100%"></video> |
+| <video src="https://github.com/omindu/sddm-themes/raw/main/Backgrounds/lucy-digital-shadows.mp4" autoplay loop muted width="100%"></video> | <video src="https://github.com/omindu/sddm-themes/raw/main/Backgrounds/black-hole-in-nebula.mp4" autoplay loop muted width="100%"></video> | <video src="https://github.com/omindu/sddm-themes/raw/main/Backgrounds/motorcycle-girl-chaos.mp4" autoplay loop muted width="100%"></video> | <video src="https://github.com/omindu/sddm-themes/raw/main/Backgrounds/shadowblade-wanderer.mp4" autoplay loop muted width="100%"></video> |
 
 </details>
 
@@ -74,7 +73,7 @@ Preview the 37 meticulously curated dimensions below. These backgrounds are rend
 
 | Before The Road | Cloud Castle | Dawn Wanderer | Evening Drive |
 | :---: | :---: | :---: | :---: |
-| <video src="Backgrounds/before_the_road.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/cloud_castle.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/dawn_wanderer.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/evening_drive.mp4" autoplay loop muted width="100%"></video> |
+| <video src="https://github.com/omindu/sddm-themes/raw/main/Backgrounds/before-the-road.mp4" autoplay loop muted width="100%"></video> | <video src="https://github.com/omindu/sddm-themes/raw/main/Backgrounds/castle-beyond-the-clouds.mp4" autoplay loop muted width="100%"></video> | <video src="https://github.com/omindu/sddm-themes/raw/main/Backgrounds/dawn-wanderer.mp4" autoplay loop muted width="100%"></video> | <video src="https://github.com/omindu/sddm-themes/raw/main/Backgrounds/evening-drive-and-windmills.mp4" autoplay loop muted width="100%"></video> |
 
 </details>
 
