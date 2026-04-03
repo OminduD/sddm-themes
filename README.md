@@ -3,8 +3,9 @@
   
   <br/>
   
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&pause=1000&color=00FFFF&center=true&vCenter=true&width=900&lines=⚡+Cinematic+SDDM+Login+Experience+⚡;🚀+Dynamic+Motion+%26+Next-Gen+Aesthetics;🎨+37+Unique+Premium+Looping+Backgrounds;🔥+Drop-in+Ready+for+Your+Rice;🎛️+Dynamic+Video+Playlists" alt="Typing SVG" />
-  
+  <a href="#">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&pause=1000&color=00FFFF&center=true&vCenter=true&width=900&lines=%E2%9A%A1+Cinematic+SDDM+Login+Experience+%E2%9A%A1;%F0%9F%9A%80+Dynamic+Motion+and+Next-Gen+Aesthetics;%F0%9F%8E%A8+37+Unique+Premium+Looping+Backgrounds;%F0%9F%94%A5+Drop-in+Ready+for+Your+Rice;%F0%9F%8E%9B%EF%B8%8F+Dynamic+Video+Playlists" alt="Typing SVG" />
+  </a>
   <br/>
   <br/>
 
@@ -35,35 +36,50 @@ Transform your static lock screen into a gateway to another dimension. ZenMatrix
 ### 🚀 Next-Level Features
 
 - **🎬 37 Looping Video Backgrounds:** High-quality, seamlessly looping visuals spanning Anime, Cyberpunk, Nature, and Fantasy.
-- **🔀 Dynamic Playlists & Changing Videos:** Backgrounds shift and cycle like a cinematic playlist, keeping your login screen fresh every time you boot! 
+- **🔀 Dynamic Playlists:** Backgrounds shift and cycle like a cinematic playlist, keeping your login screen fresh every time you boot! 
 - **⚡ Hardware Accelerated Playback:** Fluid animations powered by Qt Multimedia with a minimal CPU/GPU footprint.
 - **🛠️ Interactive TUI Installer:** One script to rule them all—resolves dependencies, handles theme selection, and provides instant live previews.
 - **🎨 Dynamic QML Architecture:** Fully responsive. Form components automatically snap and align (`left`, `center`, `right`) based on your configuration.
 - **👤 Intelligent Avatars:** Circular profile pictures featuring animated, glowing ambient borders with sleek fallback elements.
 - **🖥️ Omnipresent Session Support:** Smart dropdown menu detecting all Window Managers (Hyprland, Sway, Qtile) and DEs (KDE, GNOME).
-- **⌨️ Universal Input Ready:** Integrated toggle for on-screen touch and virtual keyboard interactions.
-- **🕰️ Customizable Widgets:** Granular control over date, time, clock formats, sizes, and font rendering.
-- **🪄 Auto-Blur Magic:** Configurable dynamic glass-morphism effects and ambient background blurring.
-- **⚙️ Hot-Swappable Configs:** Change your entire login experience instantly by editing lightweight `.conf` preset files.
 
 ---
 
-## 🎬 The ZenMatrix Video Playlist Collection
+## 🎬 Cinematic Backgrounds Playlist
 
-Dive into 37 meticulously curated dimensions. Find the perfect vibe to match your dotfiles. These backgrounds are rendered in stunning detail and seamlessly loop like an interactive playlist!
+Preview the 37 meticulously curated dimensions below. These backgrounds are rendered in stunning detail and seamlessly loop!
 
-| 🌟 Anime & Characters | 🌌 Sci-Fi & Cyberpunk | 🍃 Nature & Scenery |
-| :--- | :--- | :--- |
-| 🌸 **2B Midnight Bloom** | 🤖 **Digital Shadows** | 🛣️🚗 **Before The Road** |
-| 👦🐉 **Boy And Dragon** | 🌌 **Nebula Black Hole** | ☁️🏰 **Cloud Castle** |
-| 👧 **Evelyn** | 🏍️💥 **Motorcycle Girl Chaos**| 🌅 **Dawn Wanderer** |
-| 🪈 **Fantasy Flute** | 🥷⚔️ **Shadowblade Wanderer**| 🚗🌃 **Evening Drive** |
-| 🦊🌸 **Yae Miko Sakura** | 🎭 **Torn Mask** | 🌤️ **Golden Hour** |
-| 👊💥 **Vi And Powder** | 🗡️ **Samurai Spirit** | ⛰️🟩 **Green Fields** |
-| 🦊🎮 **Yae Miko Pixel** | 🐉 **Blind Dragon** | 🌊🌕 **Moonlight Seascape** |
-| 🐱🐈‍⬛ **Autumn Cat** | 👁️‍🗨️🐉 **Dragons Gaze** | 🏞️ **Tranquil Lake** |
+<details open>
+<summary><b>🌟 Anime & Characters</b></summary>
 
-*(Got an epic 4K animated loop? Request to add yours by following our [Contributing Guide](CONTRIBUTING.md)!)*
+| 2B Midnight Bloom | Boy And Dragon | Evelyn |
+| :---: | :---: | :---: |
+| <video src="Backgrounds/2b_midnight_bloom.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/boy_and_dragon.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/evelyn.mp4" autoplay loop muted width="100%"></video> |
+| **Fantasy Flute** | **Vi And Powder** | **Yae Miko Pixel** |
+| <video src="Backgrounds/fantasy_flute.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/vi_and_powder.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/yae_miko_pixel_art2.mp4" autoplay loop muted width="100%"></video> |
+
+</details>
+
+<details>
+<summary><b>🌌 Sci-Fi & Cyberpunk</b></summary>
+
+| Digital Shadows | Nebula Black Hole | Motorcycle Girl Chaos | Shadowblade Wanderer |
+| :---: | :---: | :---: | :---: |
+| <video src="Backgrounds/digital_shadows.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/nebula_black_hole.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/motorcycle_girl_chaos.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/shadowblade_wanderer.mp4" autoplay loop muted width="100%"></video> |
+
+</details>
+
+<details>
+<summary><b>🍃 Nature & Scenery</b></summary>
+
+| Before The Road | Cloud Castle | Dawn Wanderer | Evening Drive |
+| :---: | :---: | :---: | :---: |
+| <video src="Backgrounds/before_the_road.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/cloud_castle.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/dawn_wanderer.mp4" autoplay loop muted width="100%"></video> | <video src="Backgrounds/evening_drive.mp4" autoplay loop muted width="100%"></video> |
+
+</details>
+
+<br/>
+<em>(To save space on this README, only a few are previewed! See the full 37 in the `Backgrounds` directory!)</em>
 
 ---
 
@@ -92,8 +108,6 @@ Modify your deployed theme easily by editing its `.conf` file deeply located in 
 | `FormPosition` | Box alignment (`left`, `center`, or `right`) |
 | `Font` | Typography family (e.g. `Fira Code`, `JetBrains Mono`) |
 | `BlurRadius` | Frosted glass intensity (0 = disabled, 50 = heavy blur) |
-| `TimeFormat` | Overrides for time output displaying (e.g., `hh:mm AP`) |
-| `DateFormat` | Overrides for date output displaying |
 
 ---
 
@@ -108,12 +122,6 @@ Thank you to everyone supporting the project! Your stars keep the updates flowin
     <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=omindu/sddm-themes&type=Date" />
   </picture>
 </a>
-
----
-
-## 🤝 Community & Contributions
-
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="40" align="center" /> We invite and love contributions from the ricing community! Whether it's adding a new stunning video background, fixing a QML bug, or improving the bash installer, your help is totally welcome. Read our [Contributing Guidelines](CONTRIBUTING.md) to dive in.
 
 ---
 
